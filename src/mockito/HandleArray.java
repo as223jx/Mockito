@@ -24,4 +24,8 @@ public class HandleArray {
 		}
 		return str;
 	}
+	
+	public int[] addToElements(int i) {
+		return new int[] { 2, 3, 4, 5 };
+	}
 }
