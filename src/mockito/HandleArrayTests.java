@@ -1,5 +1,7 @@
 package mockito;
 
+import static org.junit.Assert.*;
+
 import org.junit.Test;
 import org.mockito.Mockito;
 
@@ -18,6 +20,6 @@ public class HandleArrayTests {
 	@Test
 	public void TestIntArrTestClass() {
 		IntArrForTest intArr = new IntArrForTest(1, 2, 3, 4);
-		assertEquals(intArr.getIntArr(), testArray);
+		assertArrayEquals(intArr.getIntArr(), testArray);
 	}
 }
