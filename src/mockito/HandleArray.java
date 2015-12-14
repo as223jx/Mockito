@@ -26,6 +26,10 @@ public class HandleArray {
 	}
 	
 	public int[] addToElements(int i) {
-		return new int[] { 2, 3, 4, 5 };
+		int[] newInt = intArr;
+		for(int j = 0; j < newInt.length; j++) {
+			newInt[j] += i;
+		}
+		return newInt;
 	}
 }
