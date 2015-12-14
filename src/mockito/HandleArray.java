@@ -15,4 +15,9 @@ public class HandleArray {
 		}
 		return sum;
 	}
+	
+	
+	public String getString() {
+		return " ";
+	}
 }
