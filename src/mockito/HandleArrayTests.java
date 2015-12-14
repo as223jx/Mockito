@@ -22,4 +22,15 @@ public class HandleArrayTests {
 		IntArrForTest intArr = new IntArrForTest(1, 2, 3, 4);
 		assertArrayEquals(intArr.getIntArr(), testArray);
 	}
+	
+	@Test
+	public void TestBothClasses() {
+		IntArrForTest intArr = new IntArrForTest(1, 2, 3, 4);
+		HandleArray ha = Mockito.mock(HandleArray.class);
+		Mockito.when(ha.addValues()).thenReturn(10);
+		Mockito.verify(ha, Mockito.times(1)).addValues();
+		Mockito.verify(ha, Mockito.never()).getString();
+		
+		assertEquals(ha.addValues(), 10);
+	}
 }
