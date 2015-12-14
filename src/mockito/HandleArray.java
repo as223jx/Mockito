@@ -18,6 +18,10 @@ public class HandleArray {
 	
 	
 	public String getString() {
-		return " ";
+		String str = "";
+		for(int i = 0; i < intArr.length; i++) {
+			str += intArr[i] + " ";
+		}
+		return str;
 	}
 }
