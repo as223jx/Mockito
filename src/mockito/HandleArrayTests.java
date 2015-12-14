@@ -32,4 +32,15 @@ public class HandleArrayTests {
 		
 		assertEquals(ha.addValues(), 10);
 	}
+	
+	@Test
+	public void MockTestIntArr() {
+		IntArrForTest intArr = Mockito.mock(IntArrForTest.class);
+		Mockito.when(intArr.getIntArr()).thenReturn(testArray);
+		HandleArray ha = new HandleArray(intArr.getIntArr());
+		Mockito.verify(intArr, Mockito.times(1)).getIntArr();
+		
+		int[] newArr = { 2, 3, 4, 5 };
+		assertArrayEquals(ha.addToElements(1), newArr);
+	}
 }
