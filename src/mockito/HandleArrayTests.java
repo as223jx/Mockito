@@ -14,4 +14,10 @@ public class HandleArrayTests {
 		
 		Mockito.verify(ha, Mockito.times(1)).addValues();
 	}
+	
+	@Test
+	public void TestIntArrTestClass() {
+		IntArrForTest intArr = new IntArrForTest(1, 2, 3, 4);
+		assertEquals(intArr.getIntArr(), testArray);
+	}
 }
